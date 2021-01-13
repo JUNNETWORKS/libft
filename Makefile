@@ -6,7 +6,7 @@
 #    By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/10 04:46:14 by jtanaka           #+#    #+#              #
-#    Updated: 2021/01/13 23:51:02 by jtanaka          ###   ########.fr        #
+#    Updated: 2021/01/14 00:29:29 by jtanaka          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,10 +47,7 @@ SRCS =	ft_strlen.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-		get_next_line.c \
-		get_next_line_utils.c
-
-B_SRCS=	ft_lstnew.c \
+		ft_lstnew.c \
 		ft_lstadd_front.c \
 		ft_lstsize.c \
 		ft_lstlast.c \
@@ -58,9 +55,10 @@ B_SRCS=	ft_lstnew.c \
 		ft_lstdelone.c \
 		ft_lstclear.c \
 		ft_lstiter.c \
-		ft_lstmap.c
+		ft_lstmap.c \
+		get_next_line.c \
+		get_next_line_utils.c
 OBJS = $(SRCS:.c=.o)
-B_OBJS = $(B_SRCS:.c=.o)
 
 all: $(NAME)
 
@@ -74,9 +72,6 @@ fclean: clean
 	${RM} ${NAME}
 
 re: fclean all
-
-so:
-	gcc -shared -o libft.so ${SRCS} ${B_SRCS}
 
 bonus: ${B_OBJS} ${OBJS}
 	ar rc ${NAME} ${B_OBJS} ${OBJS}
