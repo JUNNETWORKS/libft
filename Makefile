@@ -6,7 +6,7 @@
 #    By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/10 04:46:14 by jtanaka           #+#    #+#              #
-#    Updated: 2021/01/14 00:29:29 by jtanaka          ###   ########.fr        #
+#    Updated: 2021/05/08 15:38:16 by jtanaka          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,9 +55,7 @@ SRCS =	ft_strlen.c \
 		ft_lstdelone.c \
 		ft_lstclear.c \
 		ft_lstiter.c \
-		ft_lstmap.c \
-		get_next_line.c \
-		get_next_line_utils.c
+		ft_lstmap.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
